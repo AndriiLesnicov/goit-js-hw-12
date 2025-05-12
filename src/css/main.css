@@ -23,7 +23,8 @@ body {
   font-size: 16px;
 }
 
-.form button {
+.form button,
+.load-more {
   padding: 8px 16px;
   height: 35px;
   border-radius: 8px;
@@ -35,16 +36,24 @@ body {
   transition: background 0.3s ease;
 }
 
-.form button:hover {
+.form button:hover,
+.load-more:hover {
   background: #6c8cff;
 }
 
+.lm-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
 .gallery {
-  list-style: none;
-  padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
 }
 
 .gallery-item {
@@ -56,5 +65,29 @@ body {
 
 .gallery-item img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   display: block;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.info li {
+  list-style: none;
+  text-align: center;
+}
+.info p {
+  text-align: center;
+}
+
+.info b {
+  display: block;
+  margin-bottom: 4px;
 }
