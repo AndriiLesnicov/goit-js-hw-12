@@ -41,6 +41,7 @@ async function handleFormSubmit(event) {
   }
 
   await fetchAndRenderImages();
+  inputEl.value = '';
 }
 
 async function handleLoadMore() {
